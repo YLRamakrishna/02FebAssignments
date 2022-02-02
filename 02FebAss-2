@@ -1,0 +1,20 @@
+/*Assignment-2 Y.L.Ramakrishna AWDC KKD*//*factorial using Rec_funtion*/
+#include<stdio.h>
+int fac_fun(int);
+int main()
+{
+   int num, fact;
+   printf("Enter any positive integer :\n");
+   scanf("%d",&num);
+   fact =fac_fun(num);
+   printf("factorial of %d is: %d",num, fact);
+   return 0;
+}
+int fac_fun(int n)
+{
+   
+   if(n>=1)
+     return(n*fac_fun(n-1));
+    else
+   return(1);
+}
