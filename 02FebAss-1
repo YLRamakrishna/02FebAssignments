@@ -1,0 +1,38 @@
+/*Assignment-1 Y.L.Ramakrishna AWDC KKD*//*Sequential order*/
+#include <stdio.h>    
+int main()    
+{    
+    int n,temp = 0,arr[50];    
+    printf("enter  number of elements");
+    scanf("%d",&n);
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    printf("Elements before sorting: \n");    
+    for (int i = 0; i <n; i++)
+    {     
+        printf("%d ", arr[i]);     
+    }      
+    for (int i = 0; i < n; i++)
+    {     
+        for (int j = i+1; j < n; j++) 
+        {     
+            if(arr[i] > arr[j]) 
+            {    
+                temp = arr[i];    
+                arr[i] = arr[j];    
+                arr[j] = temp;    
+            }      
+        }     
+    }    
+    printf("\n");    
+    printf("Elements arranged in ascending order: \n");    
+    for (int i = 0; i < n; i++) 
+    {     
+        printf("%d ", arr[i]);    
+    }    
+    return 0;    
+}     
+
+
